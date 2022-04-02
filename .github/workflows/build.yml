@@ -281,7 +281,7 @@ jobs:
     needs:
     - set-image-name
     - changed
-    if: fromJSON(needs.changed.outputs.base) || contains(needs.changed.outputs.files, 'dotnet_grpc_bench/')
+    if: fromJSON(needs.changed.outputs.base) || contains(needs.changed.outputs.files, 'dotnet_opt_gc_grpc_bench/')
     steps:
     - name: Checkout
       uses: actions/checkout@v2
